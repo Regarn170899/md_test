@@ -1,26 +1,49 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="globalContainer">
+    <left-container/>
+    <div class="topAndTeam">
+      <top-container/>
+      <team-statistics/>
+      <button-container/>
+      <table-person/>
+      <pagination-table/>
+    </div>
+  </div>
+
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
 
+<script>
+import TopContainer from "@/components/TopContainer.vue";
+import LeftContainer from "@/components/LeftContainer.vue";
+import TeamStatistics from "@/components/TeamStatistics.vue";
+import ButtonContainer from "@/components/ButtonContainer.vue";
+import TablePerson from "@/components/TablePerson.vue";
+import PaginationTable from "@/components/PaginationTable.vue";
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  components:{
+    TopContainer,LeftContainer,
+    TeamStatistics,ButtonContainer,TablePerson,PaginationTable
   }
 }
+
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.globalContainer{
+  background: #F5F5F5;
+  width: 100%;
+  display: flex;
+}
+.topAndTeam{
+  display: flex;
+  flex-direction: column;
 }
 </style>
